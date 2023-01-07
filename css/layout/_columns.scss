@@ -1,0 +1,28 @@
+.layout-2-cols {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-text;
+    gap: 5%;
+    &-prices {
+        align-items: start;
+    }
+}
+
+.text__container {
+    min-width: 341px;
+    max-width: 549px;
+}
+
+.img__container {
+    min-width: 280px;
+    & > img {
+        width: 100%;
+    }
+}
+
+.layout-3-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

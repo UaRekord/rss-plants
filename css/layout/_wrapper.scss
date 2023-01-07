@@ -1,0 +1,19 @@
+.wrapper {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 5.5rem 8% 0 8%;
+    &-service, &-prices {
+        padding-top: 4rem;
+        padding-bottom: 11rem;
+    }
+    &-header, &-service, &-contacts {
+        background-color: $color-bg-section;
+    }
+    &-contact {
+        padding-bottom: 0;
+    }
+
+    &-footer {
+        padding-bottom: 4rem;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "plants",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "sass --watch css/style.scss css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

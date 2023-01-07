@@ -1,0 +1,81 @@
+.contacts__container {
+    background: url("/img/contact/contact_woman\ 1.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    height: 500px;
+}
+
+.dropdown__button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 20px;
+    cursor: pointer;
+    background-color: $color-city-button;
+    border: none;
+    &:hover, &:active &-opened {
+        background-color: $color-active-button;
+    }
+}
+
+.dropdown__icon {
+    @include icon($rotate-icon, url('/img/price/arrow_rotated.svg'));
+    transform: rotate(180deg);
+    &-opened {
+        transform: rotate(0deg);
+    }
+}
+
+
+.dropdown__content {
+    width: 100%;
+  display: none;
+  //  opacity: 0;
+    z-index: 1;
+    padding: 27px 35px;
+    @include font(normal, 400, 1.6rem, 4rem);
+    color: $color-h-highlight;
+    letter-spacing: 0.05em;
+    background-color: #DCE9D9;
+    & > li {
+        border-bottom: 1px solid $icons-color;
+    }
+    & > li:hover {
+        border-bottom: 1px solid $color-h-main;
+        cursor: pointer;
+        color: $color-h-main;
+    }
+}
+
+
+.contacts__dropdown{
+    margin-left: auto;
+    width: 450px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.contacts__adress {
+    margin-left: auto;
+    width: 450px;
+    margin-top: 47px;
+    border: 1px solid $color-text-black;
+    border-radius: 20px;
+    padding: 17px 32px 32px 33px;
+    display: none;
+    opacity: 0;
+    background: $color-bg-section;
+    z-index: 10;
+ }
+
+.adresses > dt {
+    float: left;
+	clear: both;
+	padding: 5px 0;
+}
+
+.adresses > dd {
+    padding: 5px 0;
+    margin-left: 125px;
+    color: $color-h-main;
+}

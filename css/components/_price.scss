@@ -1,0 +1,58 @@
+.buttons__container {
+    margin-top: 60px;
+    border: 1px solid $border-color;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 34px 41px;
+}
+
+.right__container {
+    max-width: 452px;
+    text-align: right;
+}
+
+.price__img {
+    display: block;
+    width: 175px;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.accordeon__panel {
+    margin-top: 18px;
+    border-top: 1px solid $rotate-icon;
+    padding-top: 15px;
+    &-visible {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.accordeon__text {
+  @include font(normal, 300, 1rem, 1rem);
+  margin-bottom: 6px;
+}
+
+.accordeon__price {
+    @include font(normal, 400, 1.6rem, 2rem);
+    color: $color-text-black;
+    & > span {
+        font-weight: 700;
+        color:  $color-active;
+    }
+    &:first-letter {
+        font-size: 1.2rem;
+    }
+}
+
+.accordeon__order {
+    margin-top: 12px;
+    width: 86px;
+    background-color: $button-accordeon-color;
+    border-radius: 10px;
+    border: none;
+    color: $color-h-main;
+    @include font(normal, 700, 1.4rem, 2rem);
+    padding: 3px 20px;
+}

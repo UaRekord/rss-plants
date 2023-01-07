@@ -1,0 +1,31 @@
+@mixin font($style: normal, $weight, $size, $lineHeight) {
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineHeight;
+}
+
+@mixin icon($color, $url) {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $color;
+    background-image: $url;
+}
+
+
+@mixin cols-3 ($cols, $margin) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%/3 - $margin;
+}
+
+@mixin media-tablet {
+    @media (max-width: $tablet-width) { @content; }
+}
+@mixin media-mobile {
+    @media (max-width: $mobile-width) { @content; }
+}

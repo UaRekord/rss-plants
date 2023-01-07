@@ -1,0 +1,31 @@
+@import "../node_modules/normalize-scss/sass/normalize";
+@include normalize();
+
+//icon-font
+@import "font/fontello";
+
+//abstract
+@import "abstract/variable";
+@import "abstract/mixins";
+@import "abstract/placeholders";
+
+//base
+@import "base/base";
+@import "base/logo";
+
+//layouts
+@import "layout/wrapper";
+@import "layout/columns";
+
+//components
+@import "components/header";
+@import "components/about";
+@import "components/button";
+@import "components/service";
+@import "components/price";
+@import "components/contacts";
+@import "components/footer";
+
+/*  font-family: 'Inika', serif;
+  font-family: 'Roboto', sans-serif; */
+

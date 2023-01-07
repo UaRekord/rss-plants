@@ -1,0 +1,16 @@
+.author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-left > span {
+        display: inline-block;
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.icon__social {
+    font-size: 3.2rem;
+}
