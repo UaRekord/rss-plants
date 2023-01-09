@@ -9,6 +9,12 @@
     }
 }
 
+.layout-3-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .text__container {
     min-width: 341px;
     max-width: 549px;
@@ -19,10 +25,4 @@
     & > img {
         width: 100%;
     }
-}
-
-.layout-3-col {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }

@@ -16,4 +16,7 @@
     &-footer {
         padding-bottom: 4rem;
     }
+    @include media-tablet {
+        max-width: $tablet-width;
+    }
 }

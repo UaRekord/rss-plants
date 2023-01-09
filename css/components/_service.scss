@@ -6,6 +6,15 @@
     margin-bottom: 91px;
 }
 
+.main__h2-service {
+    color: $color-h-highlight;
+    max-width: 306px;
+    @include media-tablet {
+        @include font(normal, 400, 3.5rem, 4.6rem);
+        margin-bottom: 40px;
+    }
+}
+
 .service__buttons {
     max-width: 568px;
 }

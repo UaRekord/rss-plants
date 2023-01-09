@@ -1,8 +1,39 @@
 .about__container {
     padding: 70px 0 64px 0;
+    @include media-tablet {
+        padding-top: 0;
+        flex-direction: column;
+    }
 }
-.text {
-    &-about {
-        line-height: 3rem;
+
+.text__container-about {
+    @include media-tablet {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.main__h2-about {
+    color: $color-h-highlight;
+    margin-bottom: 4rem;
+    & > span {
+        color: $color-active;
+    }
+    @include media-tablet {
+        @include font(normal, 400, 3.5rem, 4.6rem);
+        padding: 0 50px;
+    }
+}
+
+.text-about {
+    line-height: 3rem;
+    @include media-tablet {
+        @include font(normal, 400, 2rem, 3rem);
+    }
+}
+
+.img__container-about {
+    @include media-tablet {
+        max-width: 250px;
     }
 }
