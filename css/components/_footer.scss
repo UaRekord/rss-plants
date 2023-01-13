@@ -9,6 +9,15 @@
             margin-right: 0;
         }
     }
+    @include media-tablet {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 115px;
+        @include font(normal, 400, 2rem, 2.4rem);
+    }
+    @include media-mobile {
+        height: 105px;
+    }
 }
 
 .icon__social {

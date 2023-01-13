@@ -16,16 +16,36 @@ cursor: pointer;
         color: $color-text-black;
         text-transform: uppercase;
         font-family: 'Inter';
+        border-radius: 10px;
         @include font(normal, 400, 1.6rem, 2rem);
+        @include media-mobile {
+           width: 100px;
+           height: 34px;
+           @include font(normal, 400, 1rem, 2rem);
+        }
     }
     &-service {
         margin-right: 38px;
         &:last-child {
             margin-right: 0;
         }
+        @include media-mobile {
+            width: 121px;
+            height: 35px;
+            @include font(normal, 400, 1.5rem, 2rem);
+            margin-right: 10px;
+            margin-bottom: 9px;
+        }
     }
     &-price {
         margin-bottom: 39px;
+        @include media-mobile {
+            display: block;
+            margin: 0 auto;
+            width: 121px;
+            height: 35px;
+            @include font(normal, 700, 1.5rem, 1.95rem);
+        }
     }
     &-adress {
         width: 122px;
@@ -54,7 +74,13 @@ cursor: pointer;
         background: $color-bg-section;
         border: none;
         border-radius: 20px;
-        color: $color-text-black
+        color: $color-text-black;
+        @include media-mobile {
+            max-width: 180px;
+            align-items: center;
+            margin-top: 14px;
+            @include font(normal, 700, 1.5rem, 2rem);
+        }
     }
     &-accordeon:first-child {
         margin-top: 0;
@@ -68,10 +94,9 @@ cursor: pointer;
 }
 
 .button__icon {
-    @include icon($icons-color, url('/img/price/arrow_rotated.svg'));
+    @include icon($icons-color, url('/img/price/arrow.svg'));
     &-opened {
-        background-image: url('/img/price/arrow_rotated.svg');
-        background-color: $rotate-icon;
+        @include icon($rotate-icon, url('/img/price/arrow_rotated.svg'));
     }
 }
 

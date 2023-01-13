@@ -28,6 +28,9 @@
                         <li class="menu__item"><a href="#contacts">Contacts</a></li>
                     </ul>
                 </nav>
+                <div class="navigation-button" id="nav-button">
+                    <span></span><span></span><span></span><span></span>
+                </div>
             </div>
             <div class="block__container layout-2-cols">
                 <div class="img__container img__container-header">
@@ -46,7 +49,7 @@
             <div class="wrapper wrapper-about">
                 <div class="layout-2-cols about__container">
                     <div class="text__container text__container-about">
-                        <h2 class="main__h2 main__h2-about">We are <span>professional experienced</span> gardeners</h2>
+                        <h2 class="h2__about">We are <span>professional experienced</span> gardeners</h2>
                         <p class="text text-about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                     </div>
                     <div class="img__container img__container-about">
@@ -58,7 +61,7 @@
         <section class="service" id="service">
             <div class="wrapper wrapper-service">
                 <div class="service__container">
-                    <h2 class="main__h2 main__h2-service">Service and our projects</h2>
+                    <h2 class="main__h2-service">Service and our projects</h2>
                     <div class="service__buttons">
                         <button class="button button-service" id="gardens">Gardens</button>
                         <button class="button button-service" id="lawn">Lawn</button>
@@ -67,42 +70,60 @@
                 </div>
                 <div class="service__cards layout-3-col">
                     <div class="card__item">
-                        <img src="/img/service/card1.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture>
+                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card1_768.png">
+                            <img src="/img/service/card1.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                          </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Garden care</h4>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
                     <div class="card__item">
-                        <img src="/img/service/card2.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture>
+                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card2_768.png">
+                            <img src="/img/service/card2.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                          </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Planting</h4>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
                     <div class="card__item">
-                        <img src="/img/service/card3.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture>
+                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card3_768.png">
+                            <img src="/img/service/card3.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                          </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Lawn care</h4>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
                     <div class="card__item">
-                        <img src="/img/service/card4.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture>
+                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card4_768.png">
+                            <img src="/img/service/card4.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                          </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Planting</h4>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
                     <div class="card__item">
-                        <img src="/img/service/card5.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture>
+                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card5_768.png">
+                            <img src="/img/service/card5.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                          </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Garden care</h4>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
                     <div class="card__item">
-                        <img src="/img/service/card6.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture>
+                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card5_768.png">
+                            <img src="/img/service/card5.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                          </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Planting</h4>
                             <p class="card__text">Lorem Ipsum has been the industry</p>
@@ -113,14 +134,13 @@
             </section>
             <section class="price" id="price">
                 <div class="wrapper wrapper-prices">
-                    <div class="layout-2-cols">
+                    <div class="layout-2-cols prices__container">
                         <div class="price__container">
-                            <h2 class="main__h2 main__h2-prices">Prices</h2>
+                            <h2 class="h2__prices">Prices</h2>
                             <div class="buttons__container">
-<!-- добавлены стили clicked, убрать после JS -->
-                                <div class="button__with_icon button__with_icon-accordeon button__with_icon-clicked" id="basics">Basics<span class="button__icon button__icon-opened"></span>
-<!-- инлайн стиль исключительно до добавления js, просто чтоб было видно как выглядит и будет удален!!! -->
-                                    <div class="accordeon__panel accordeon__panel-visible" style="display: block; opacity: 1;">
+<!-- убран стили button__with_icon-clicked  button__icon-opened-->
+                                <div class="button__with_icon button__with_icon-accordeon" id="basics">Basics<span class="button__icon button__icon-opened"></span>
+                                    <div class="accordeon__panel accordeon__panel-visible">
                                         <p class="accordeon__text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                                         <p class="accordeon__price"><span>$15</span> / per hour</p>
                                         <button class="accordeon__order">Order</button>
@@ -141,7 +161,7 @@
                             </div>
                         </div>
                         <div class="right__container">
-                            <h2 class="main__h2 main__h2-prices">Our best <span>gardeners</span> are ready to help you</h2>
+                            <h2 class="h2__prices h2__prices-right">Our best <span>gardeners</span> are ready to help you</h2>
                             <button class="button button-price" id="contactUs">Contact us</button>
                             <img src="./img/header/leafs.png" alt="Home flower" class="price__img">
                         </div>
@@ -151,7 +171,7 @@
             <section class="contacts" id="contacts">
                 <div class="wrapper wrapper-contacts">
                     <div class="contacts__container">
-                        <h2 class="main__h2 main__h2-contacts">Contact us</h2>
+                        <h2 class="h2__contacts">Contact us</h2>
                         <div class="contacts__dropdown">
                             <button class="dropdown__button">City<span class="dropdown__icon"></span></button>
                             <ul class="dropdown__content">
@@ -161,8 +181,8 @@
                                 <li id="Sherrill">Sherrill, NY</li>
                               </ul>
                         </div>
-<!-- инлайн стиль исключительно до добавления js, просто чтоб было видно как выглядит и будет удален!!! -->
-                        <div class="contacts__adress" style="display: block; opacity: 1;" id="Canandaigua-item">
+<!-- инлайн стиль исключительно до добавления js, просто чтоб было видно как выглядит и будет удален!!! style="display: block; opacity: 1;" -->
+                        <div class="contacts__adress" id="Canandaigua-item">
                             <dl class="adresses">
                                 <dt>City:</dt>
                                 <dd>Canandaigua, NY</dd>

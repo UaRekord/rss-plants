@@ -1,27 +1,43 @@
 .about__container {
-    padding: 70px 0 64px 0;
+    padding: 64px 0;
     @include media-tablet {
         padding-top: 0;
         flex-direction: column;
+    }
+    @include media-mobile {
+       padding-bottom: 0px;
     }
 }
 
 .text__container-about {
     @include media-tablet {
-        width: 100%;
-        text-align: center;
+        max-width: 100%;
+        margin-bottom: 24px;
     }
+    @include media-mobile {
+        margin-bottom: 0px;
+    }
+
 }
 
-.main__h2-about {
+.h2__about {
     color: $color-h-highlight;
-    margin-bottom: 4rem;
+    margin: 40px 0;
+    text-align: left;
     & > span {
         color: $color-active;
     }
     @include media-tablet {
         @include font(normal, 400, 3.5rem, 4.6rem);
-        padding: 0 50px;
+        margin: 0;
+        padding: 0 100px;
+        margin-bottom: 55px;
+        text-align: center;
+    }
+    @include media-mobile {
+        padding: 0;
+        @include font(normal, 400, 2.5rem, 3.3rem);
+        margin-bottom: 15px;
     }
 }
 
@@ -30,10 +46,20 @@
     @include media-tablet {
         @include font(normal, 400, 2rem, 3rem);
     }
+    @include media-mobile {
+        padding: 0;
+        @include font(normal, 400, 1.5rem, 2.5rem);
+        margin-bottom: 0;
+    }
 }
 
 .img__container-about {
     @include media-tablet {
         max-width: 250px;
+        margin-bottom: 30px;
+    }
+    @include media-mobile {
+        max-width: 150px;
+        margin-bottom: 30px;
     }
 }

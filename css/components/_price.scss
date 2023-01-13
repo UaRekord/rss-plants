@@ -1,3 +1,40 @@
+.prices__container {
+    @include media-mobile {
+        flex-direction: column;
+    }
+}
+
+.h2__prices {
+    font-family: 'Inter';
+    @include font(normal, 700, 4rem, 4.8rem);
+    color: $color-text-black;
+    margin-bottom: 35px;
+    @include media-mobile {
+        @include font(normal, 700, 2.5rem, 3rem);
+        text-align: center;
+        margin-bottom: 0;
+    }
+    & > span {
+        color: $color-h-highlight;
+    }
+    &-left {
+        @include media-tablet {
+            @include font(normal, 700, 3.5rem, 4.2rem);
+        }
+    }
+    &-right {
+        @include media-tablet {
+            @include font(normal, 700, 2.5rem, 3.5rem);
+            margin-top: 100px;
+        }
+        @include media-mobile {
+            @include font(normal, 700, 2rem, 3.5rem);
+            margin: 20px 0;
+            padding: 0 50px;
+        }
+    }
+}
+
 .buttons__container {
     margin-top: 60px;
     border: 1px solid $border-color;
@@ -5,6 +42,13 @@
     display: flex;
     flex-direction: column;
     padding: 34px 41px;
+    @include media-mobile {
+        margin-top: 40px;
+        padding: 24px 22px;
+        align-items: center;
+        max-width: 224px;
+        margin: 40px auto 0px auto;
+    }
 }
 
 .right__container {
@@ -17,6 +61,9 @@
     width: 175px;
     margin-right: 0;
     margin-left: auto;
+    @include media-mobile {
+        display: none;
+    }
 }
 
 .accordeon__panel {

@@ -1,22 +1,65 @@
 .wrapper {
     max-width: $content-width;
     margin: 0 auto;
-    padding: 5.5rem 8% 0 8%;
-    &-service, &-prices {
-        padding-top: 4rem;
-        padding-bottom: 11rem;
+    padding: 55px 7% 0 7%;
+    @include media-tablet {
+        max-width: $tablet-width;
     }
+    @include media-mobile {
+        max-width: $mobile-width;
+        padding-top: 35px
+    }
+
+    &-about {
+        @include media-tablet {
+            padding-top: 40px;
+        }
+        @include media-mobile {
+            padding-top: 25px
+        }
+    }
+    &-service {
+        padding-top: 40px;
+        padding-bottom: 110px;
+        @include media-tablet {
+            padding-bottom: 35px;
+        }
+        @include media-mobile {
+            padding-top: 25px;
+            padding-bottom: 20px;
+        }
+    }
+    &-prices {
+        padding-top: 35px;
+        padding-bottom: 110px;
+        @include media-tablet {
+            padding-top: 40px;
+            padding-bottom: 90px;
+        }
+        @include media-mobile {
+            padding-top: 25px;
+            padding-bottom: 40px;
+        }
+    }
+
     &-header, &-service, &-contacts {
         background-color: $color-bg-section;
     }
-    &-contact {
-        padding-bottom: 0;
+    &-contacts {
+        padding-top: 40px;
+        @include media-mobile {
+            padding-top: 20px;
+        }
     }
 
     &-footer {
-        padding-bottom: 4rem;
-    }
-    @include media-tablet {
-        max-width: $tablet-width;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        @include media-tablet {
+            padding: 33px 0;
+        }
+        @include media-mobile {
+            padding: 22px 0;
+        }
     }
 }

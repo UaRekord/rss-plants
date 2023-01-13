@@ -1,6 +1,5 @@
 .layout-2-cols {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     color: $color-text;
     gap: 5%;
@@ -16,12 +15,13 @@
 }
 
 .text__container {
-    min-width: 341px;
+    min-width: 224px;
     max-width: 549px;
 }
 
 .img__container {
-    min-width: 280px;
+    min-width: 150px;
+    align-self: center;
     & > img {
         width: 100%;
     }

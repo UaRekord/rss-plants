@@ -46,23 +46,5 @@ h5 {
 
 .text {
     @include font(normal, 400, 2rem, 3.5rem);
-    margin-bottom: 4.8rem;
-}
-
-.main__h2 {
-    &-prices {
-        font-family: 'Inter';
-        @include font(normal, 700, 4rem, 4.8rem);
-        color: $color-text-black;
-        margin-bottom: 3.8rem;
-    }
-    &-prices > span{
-        color: $color-h-highlight;
-    }
-    &-contacts {
-        color: $color-h-highlight;
-        text-align: center;
-        margin-bottom: 3.7rem;
-    }
-
+    margin-bottom: 48px;
 }

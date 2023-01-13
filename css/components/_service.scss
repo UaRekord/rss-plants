@@ -4,6 +4,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 91px;
+    @include media-tablet {
+        padding-top: 20px;
+        margin-bottom: 45px;
+    }
+    @include media-mobile {
+        padding-top: 0px;
+        margin-bottom: 33px;
+    }
 }
 
 .main__h2-service {
@@ -13,24 +21,50 @@
         @include font(normal, 400, 3.5rem, 4.6rem);
         margin-bottom: 40px;
     }
+    @include media-mobile {
+        @include font(normal, 400, 2.5rem, 3.3rem);
+        margin-bottom: 36px;
+        padding-right: 50px;
+   }
 }
 
 .service__buttons {
     max-width: 568px;
+    margin-right: 200px;
+    @include media-tablet {
+        margin-right: 0px;
+    }
+}
+
+.service__cards {
+    @include media-mobile {
+        justify-content: center;
+    }
 }
 
 .card__item {
-    flex-basis: 280px;
+    flex-basis: 330px;
+    overflow: hidden;
     &-blur {
         filter: blur(2px);
     }
     &:nth-child(1), &:nth-child(2) {
         margin-bottom: 55px;
     }
+    @include media-tablet {
+        max-width: 280px;
+        &:nth-child(n+1) {
+            margin-bottom: 35px;
+        }
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
 }
 
 .card__img {
     display: block;
+    max-width: 100%;
 }
 
 .card__text-container {
@@ -38,6 +72,9 @@
     height: 100px;
     border: 1px solid $border-color;
     border-radius: 0px 0px 20px 20px;
+    @include media-mobile {
+        padding: 0 10px;
+    }
 }
 
 .card__h4 {
