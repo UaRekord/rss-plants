@@ -687,7 +687,7 @@ h5 {
   align-items: flex-end;
   height: 25px;
 }
-@media (max-width: 768px) {
+@media (max-width: 380px) {
   .menu {
     display: none;
   }
@@ -695,6 +695,11 @@ h5 {
 
 .menu__item {
   margin-right: 46px;
+}
+@media (max-width: 768px) {
+  .menu__item {
+    margin-right: 23git spx;
+  }
 }
 .menu__item > a:hover {
   color: #E06733;
@@ -704,8 +709,13 @@ h5 {
 }
 
 .navigation-button {
-  display: block;
+  display: none;
   position: relative;
+}
+@media (max-width: 380px) {
+  .navigation-button {
+    display: block;
+  }
 }
 
 .navigation-button > span {

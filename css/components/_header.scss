@@ -26,13 +26,16 @@
     display: flex;
     align-items: flex-end;
     height: 25px;
-    @include media-tablet {
-        display: none;
+   @include media-mobile {
+      display: none;
     }
 }
 
 .menu__item {
     margin-right: 46px;
+    @include media-tablet {
+        margin-right: 23git spx;
+    }
     & > a:hover {
         color: $color-active;
     }
@@ -42,8 +45,11 @@
 }
 
 .navigation-button {
-    display: block;
+    display: none;
     position: relative;
+    @include media-mobile {
+        display: block;
+    }
 }
 
 .navigation-button > span {
