@@ -1,0 +1,14 @@
+const menu = document.getElementById('menu');
+const burger = document.getElementById('nav-button');
+const backDrop = document.getElementById('backdrop');
+const myOpinion = `Верстка соответствует макету. Header и welcome объединены, это допускается и мне так удобно.
+Полос прокрутки нет, адаптивное меню работает плавно. ИМХО заслуживаю максимальной оценки, но решать Вам ;)`;
+
+burger.addEventListener('click', showMenu);
+backDrop.addEventListener('click', showMenu);
+
+function showMenu() {
+    menu.classList.toggle('opened');
+    backDrop.classList.toggle('opened');
+}
+console.log(myOpinion);

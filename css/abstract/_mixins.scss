@@ -29,3 +29,11 @@
 @mixin media-mobile {
     @media (max-width: $mobile-width) { @content; }
 }
+
+@mixin custom-width {
+    @media (max-width: $custom-width) { @content; }
+}
+
+@mixin media-big-mobile {
+    @media (max-width: $media-big-mobile) { @content; }
+}

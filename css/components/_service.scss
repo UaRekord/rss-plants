@@ -37,7 +37,7 @@
 }
 
 .service__cards {
-    @include media-mobile {
+    @include custom-width {
         justify-content: center;
     }
 }

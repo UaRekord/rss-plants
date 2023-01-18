@@ -1,6 +1,7 @@
 .prices__container {
-    @include media-mobile {
+    @include custom-width {
         flex-direction: column;
+        align-items: center;
     }
 }
 

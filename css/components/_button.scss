@@ -29,7 +29,7 @@ cursor: pointer;
         &:last-child {
             margin-right: 0;
         }
-        @include media-mobile {
+        @include media-big-mobile {
             width: 121px;
             height: 35px;
             @include font(normal, 400, 1.5rem, 2rem);
@@ -95,7 +95,7 @@ cursor: pointer;
 
 .button__icon {
     @include icon($icons-color, url('/img/price/arrow.svg'));
-    &-opened {
+    &.opened {
         @include icon($rotate-icon, url('/img/price/arrow_rotated.svg'));
     }
 }

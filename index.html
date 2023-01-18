@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="/js/script.js"></script>
 </head>
 <body>
     <header class="header" id="home">
@@ -20,17 +19,18 @@
                     <span class="logo__img"></span><p class="logo__name">Plants</p>
                 </div>
                 <nav class="nav">
-                    <ul class="menu">
+                    <ul class="menu" id="menu">
                         <li class="menu__item"><a href="#home">Home</a></li>
                         <li class="menu__item"><a href="#about">About us</a></li>
                         <li class="menu__item"><a href="#service">Service</a></li>
                         <li class="menu__item"><a href="#price">Price</a></li>
                         <li class="menu__item"><a href="#contacts">Contacts</a></li>
                     </ul>
+                    <div class="navigation-button" id="nav-button">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div id="backdrop" class="backdrop"></div>
                 </nav>
-                <div class="navigation-button" id="nav-button">
-                    <span></span><span></span><span></span><span></span>
-                </div>
             </div>
             <div class="block__container layout-2-cols">
                 <div class="img__container img__container-header">
@@ -71,7 +71,7 @@
                 <div class="service__cards layout-3-col">
                     <div class="card__item">
                         <picture>
-                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card1_768.png">
+                            <source media="(max-width: 768px)" srcset="/img/service/card1_768.png">
                             <img src="/img/service/card1.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
@@ -81,7 +81,7 @@
                     </div>
                     <div class="card__item">
                         <picture>
-                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card2_768.png">
+                            <source media="(max-width: 768px)" srcset="/img/service/card2_768.png">
                             <img src="/img/service/card2.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
@@ -91,7 +91,7 @@
                     </div>
                     <div class="card__item">
                         <picture>
-                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card3_768.png">
+                            <source media="(max-width: 768px)" srcset="/img/service/card3_768.png">
                             <img src="/img/service/card3.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
@@ -101,7 +101,7 @@
                     </div>
                     <div class="card__item">
                         <picture>
-                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card4_768.png">
+                            <source media="(max-width: 768px)" srcset="/img/service/card4_768.png">
                             <img src="/img/service/card4.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
@@ -111,7 +111,7 @@
                     </div>
                     <div class="card__item">
                         <picture>
-                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card5_768.png">
+                            <source media="(max-width: 768px)" srcset="/img/service/card5_768.png">
                             <img src="/img/service/card5.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
@@ -121,7 +121,7 @@
                     </div>
                     <div class="card__item">
                         <picture>
-                            <source media="(max-width: 768px)" alt="Lorem Ipsum has been the industry" srcset="/img/service/card5_768.png">
+                            <source media="(max-width: 768px)" srcset="/img/service/card5_768.png">
                             <img src="/img/service/card5.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
@@ -139,7 +139,7 @@
                             <h2 class="h2__prices">Prices</h2>
                             <div class="buttons__container">
 <!-- убран стили button__with_icon-clicked  button__icon-opened-->
-                                <div class="button__with_icon button__with_icon-accordeon" id="basics">Basics<span class="button__icon button__icon-opened"></span>
+                                <div class="button__with_icon button__with_icon-accordeon" id="basics">Basics<span class="button__icon"></span>
                                     <div class="accordeon__panel accordeon__panel-visible">
                                         <p class="accordeon__text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                                         <p class="accordeon__price"><span>$15</span> / per hour</p>
@@ -250,5 +250,6 @@
             </div>
         </div>
     </footer>
+<script src="/js/script.js"></script>
 </body>
 </html>
