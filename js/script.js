@@ -7,6 +7,7 @@ const myOpinion = `Верстка соответствует макету. Heade
 
 burger.addEventListener('click', showMenu);
 backDrop.addEventListener('click', showMenu);
+menu.addEventListener('click', showMenu);
 
 function showMenu() {
     menu.classList.toggle('opened');
