@@ -1,5 +1,5 @@
 .contacts__container {
-    background: url("/img/contact/contact_woman\ 1.png");
+    background: url("/src/img/contact/contact_woman\ 1.png");
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: contain;
@@ -46,23 +46,27 @@
 }
 
 .dropdown__icon {
-    @include icon($rotate-icon, url('/img/price/arrow_rotated.svg'));
+    @include icon($rotate-icon, url('/src/img/price/arrow_rotated.svg'));
     transform: rotate(180deg);
-    &-opened {
+    &.opened {
         transform: rotate(0deg);
     }
 }
 
 .dropdown__content {
     width: 100%;
-  display: none;
-  //  opacity: 0;
+    display: none;
+    opacity: 0;
     z-index: 1;
     padding: 27px 35px;
     @include font(normal, 400, 1.6rem, 4rem);
     color: $color-h-highlight;
     letter-spacing: 0.05em;
     background-color: #DCE9D9;
+    &.visible {
+        display: block;
+        opacity: 1;
+    }
     & > li {
         border-bottom: 1px solid $icons-color;
     }
@@ -95,6 +99,10 @@
     opacity: 0;
     background: $color-bg-section;
     z-index: 10;
+    &.visible {
+        display: block;
+        opacity: 1;
+    }
     @include media-tablet {
         margin: 61px auto 0 auto;
     }

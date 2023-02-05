@@ -83,3 +83,7 @@
     margin: 10px 0;
 }
 
+.blur {
+    transition: filter 500ms linear;
+    filter: blur(3px);
+}

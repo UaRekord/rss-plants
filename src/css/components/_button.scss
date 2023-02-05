@@ -8,7 +8,7 @@ font-family: 'Inika';
 background-color: transparent;
 cursor: pointer;
 @include font(normal, 400, 2rem, 2.6rem);
-    &:hover {
+    &:hover, &.clicked {
         background-color: $color-active;
         color: $color-bg-section;
 }
@@ -94,9 +94,9 @@ cursor: pointer;
 }
 
 .button__icon {
-    @include icon($icons-color, url('/img/price/arrow.svg'));
+    @include icon($icons-color, url('/src/img/price/arrow.svg'));
     &.opened {
-        @include icon($rotate-icon, url('/img/price/arrow_rotated.svg'));
+        @include icon($rotate-icon, url('/src/img/price/arrow_rotated.svg'));
     }
 }
 

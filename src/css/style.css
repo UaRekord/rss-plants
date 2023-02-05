@@ -7,6 +7,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import "/src/css/font/fontello.css";
 html {
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -415,69 +416,6 @@ template {
   display: none;
 }
 
-@font-face {
-  font-family: "fontello";
-  src: url("/font/fontello.eot?40108924");
-  src: url("/font/fontello.eot?40108924#iefix") format("embedded-opentype"), url("/font/fontello.woff2?40108924") format("woff2"), url("/font/fontello.woff?40108924") format("woff"), url("/font/fontello.ttf?40108924") format("truetype"), url("/font/fontello.svg?40108924#fontello") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?40108924#fontello') format('svg');
-  }
-}
-*/
-[class^=icon-]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: never;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: 0.2em;
-  text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: 0.2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-}
-
-.icon-down-circle:before {
-  content: "\e800";
-} /* '' */
-.icon-twitter:before {
-  content: "\f099";
-} /* '' */
-.icon-facebook:before {
-  content: "\f09a";
-} /* '' */
-.icon-pinterest-circled:before {
-  content: "\f0d2";
-} /* '' */
-.icon-instagram:before {
-  content: "\f16d";
-} /* '' */
-.icon-copyright:before {
-  content: "\f1f9";
-} /* '' */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -681,7 +619,7 @@ h5 {
 
 .logo__img {
   display: inline-block;
-  background-image: url("/img/header/logo_vector.svg");
+  background-image: url("/src/img/header/logo_vector.svg");
   width: 20px;
   height: 20px;
 }
@@ -1005,7 +943,7 @@ h1 {
   font-size: 2rem;
   line-height: 2.6rem;
 }
-.button:hover {
+.button:hover, .button.clicked {
   background-color: #E06733;
   color: #EDF2EC;
 }
@@ -1126,7 +1064,7 @@ h1 {
   height: 16px;
   border-radius: 50%;
   background-color: #d9d9d9;
-  background-image: url("/img/price/arrow.svg");
+  background-image: url("/src/img/price/arrow.svg");
 }
 .button__icon.opened {
   display: inline-block;
@@ -1136,7 +1074,7 @@ h1 {
   height: 16px;
   border-radius: 50%;
   background-color: #AEA1A1;
-  background-image: url("/img/price/arrow_rotated.svg");
+  background-image: url("/src/img/price/arrow_rotated.svg");
 }
 
 .service__container {
@@ -1247,6 +1185,11 @@ h1 {
   margin: 10px 0;
 }
 
+.blur {
+  transition: filter 500ms linear;
+  filter: blur(3px);
+}
+
 @media (max-width: 656px) {
   .prices__container {
     flex-direction: column;
@@ -1346,7 +1289,7 @@ h1 {
 }
 .accordeon__panel-visible {
   display: none;
-  opacity: 0;
+  opacity: 1;
 }
 
 .accordeon__text {
@@ -1387,7 +1330,7 @@ h1 {
 }
 
 .contacts__container {
-  background: url("/img/contact/contact_woman 1.png");
+  background: url("/src/img/contact/contact_woman 1.png");
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: contain;
@@ -1454,16 +1397,17 @@ h1 {
   height: 16px;
   border-radius: 50%;
   background-color: #AEA1A1;
-  background-image: url("/img/price/arrow_rotated.svg");
+  background-image: url("/src/img/price/arrow_rotated.svg");
   transform: rotate(180deg);
 }
-.dropdown__icon-opened {
+.dropdown__icon.opened {
   transform: rotate(0deg);
 }
 
 .dropdown__content {
   width: 100%;
   display: none;
+  opacity: 0;
   z-index: 1;
   padding: 27px 35px;
   font-style: normal;
@@ -1473,6 +1417,10 @@ h1 {
   color: #499A18;
   letter-spacing: 0.05em;
   background-color: #DCE9D9;
+}
+.dropdown__content.visible {
+  display: block;
+  opacity: 1;
 }
 .dropdown__content > li {
   border-bottom: 1px solid #d9d9d9;
@@ -1513,6 +1461,10 @@ h1 {
   opacity: 0;
   background: #EDF2EC;
   z-index: 10;
+}
+.contacts__adress.visible {
+  display: block;
+  opacity: 1;
 }
 @media (max-width: 768px) {
   .contacts__adress {
@@ -1579,8 +1531,5 @@ h1 {
 .icon__social {
   font-size: 3.2rem;
 }
-
-/*  font-family: 'Inika', serif;
-  font-family: 'Roboto', sans-serif; */
 
 /*# sourceMappingURL=style.css.map */

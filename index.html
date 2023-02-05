@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plants</title>
-    <link type="image/x-icon" href="/img/favicon.ico" rel="shortcut icon">
-    <link type="Image/x-icon" href="/img/favicon.ico" rel="icon">
+    <link type="image/x-icon" href="/src/img/favicon.ico" rel="shortcut icon">
+    <link type="Image/x-icon" href="/src/img/favicon.ico" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body id="body">
     <header class="header" id="home">
@@ -34,7 +34,7 @@
             </div>
             <div class="block__container layout-2-cols">
                 <div class="img__container img__container-header">
-                    <img src="./img/header/leafs.png" alt="Plant">
+                    <img src="./src/img/header/leafs.png" alt="Plant">
                 </div>
                 <div class="text__container text__container-header">
                     <h1 class="first-screen__title">We grow <span>plants</span> and give you oxygen</h1>
@@ -53,7 +53,7 @@
                         <p class="text text-about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                     </div>
                     <div class="img__container img__container-about">
-                        <img src="./img/about/houseplant1.png" alt="Home flower" class="about__img">
+                        <img src="./src/img/about/houseplant1.png" alt="Home flower" class="about__img">
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
             <div class="wrapper wrapper-service">
                 <div class="service__container">
                     <h2 class="main__h2-service">Service and our projects</h2>
-                    <div class="service__buttons">
+                    <div class="service__buttons" id="buttonsContainer">
                         <button class="button button-service" id="gardens">Gardens</button>
                         <button class="button button-service" id="lawn">Lawn</button>
                         <button class="button button-service" id="planting">Planting</button>
@@ -70,9 +70,9 @@
                 </div>
                 <div class="service__cards layout-3-col">
                     <div class="card__item">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="/img/service/card1_768.png">
-                            <img src="/img/service/card1.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture class="gardens">
+                            <source media="(max-width: 768px)" srcset="./src/img/service/card1_768.png">
+                            <img src="./src/img/service/card1.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Garden care</h4>
@@ -80,9 +80,9 @@
                         </div>
                     </div>
                     <div class="card__item">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="/img/service/card2_768.png">
-                            <img src="/img/service/card2.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture class="planting">
+                            <source media="(max-width: 768px)" srcset="./src/img/service/card2_768.png">
+                            <img src="./src/img/service/card2.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Planting</h4>
@@ -90,9 +90,9 @@
                         </div>
                     </div>
                     <div class="card__item">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="/img/service/card3_768.png">
-                            <img src="/img/service/card3.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture class="lawn">
+                            <source media="(max-width: 768px)" srcset="./src/img/service/card3_768.png">
+                            <img src="./src/img/service/card3.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Lawn care</h4>
@@ -100,9 +100,9 @@
                         </div>
                     </div>
                     <div class="card__item">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="/img/service/card4_768.png">
-                            <img src="/img/service/card4.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture class="planting">
+                            <source media="(max-width: 768px)" srcset="./src/img/service/card4_768.png">
+                            <img src="./src/img/service/card4.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Planting</h4>
@@ -110,9 +110,9 @@
                         </div>
                     </div>
                     <div class="card__item">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="/img/service/card5_768.png">
-                            <img src="/img/service/card5.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture class="gardens">
+                            <source media="(max-width: 768px)" srcset="./src/img/service/card5_768.png">
+                            <img src="./src/img/service/card5.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Garden care</h4>
@@ -120,9 +120,9 @@
                         </div>
                     </div>
                     <div class="card__item">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="/img/service/card5_768.png">
-                            <img src="/img/service/card5.png" alt="Lorem Ipsum has been the industry" class="card__img">
+                        <picture class="planting">
+                            <source media="(max-width: 768px)" srcset="./src/img/service/card5_768.png">
+                            <img src="./src/img/service/card6.png" alt="Lorem Ipsum has been the industry" class="card__img">
                           </picture>
                         <div class="card__text-container">
                             <h4 class="card__h4">Planting</h4>
@@ -138,32 +138,33 @@
                         <div class="price__container">
                             <h2 class="h2__prices">Prices</h2>
                             <div class="buttons__container">
-<!-- убран стили button__with_icon-clicked  button__icon-opened-->
-                                <div class="button__with_icon button__with_icon-accordeon" id="basics">Basics<span class="button__icon"></span>
+                                <div class="button__with_icon button__with_icon-accordeon" id="basic">Basic<span class="button__icon"></span>
                                     <div class="accordeon__panel accordeon__panel-visible">
                                         <p class="accordeon__text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                                         <p class="accordeon__price"><span>$15</span> / per hour</p>
-                                        <button class="accordeon__order">Order</button>
-                                      </div>
+                                        <a href="#contacts" class="accordeon__order">Order</a>
+                                    </div>
                                 </div>
                                 <div class="button__with_icon button__with_icon-accordeon" id="standart">Standart<span class="button__icon"></span>
                                     <div class="accordeon__panel accordeon__panel-visible">
                                         <p class="accordeon__text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                                         <p class="accordeon__price"><span>$25</span> / per hour</p>
-                                        <button class="accordeon__order">Order</button>
-                                      </div></div>
+                                        <a href="#contacts" class="accordeon__order">Order</a>
+                                      </div>
+                                </div>
                                 <div class="button__with_icon button__with_icon-accordeon" id="proCare">Pro care<span class="button__icon"></span>
                                     <div class="accordeon__panel accordeon__panel-visible">
                                         <p class="accordeon__text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                                         <p class="accordeon__price"><span>$35</span> / per hour</p>
-                                        <button class="accordeon__order">Order</button>
-                                      </div></div>
+                                        <a href="#contacts" class="accordeon__order">Order</a>
+                                      </div>
+                                </div>
                             </div>
                         </div>
                         <div class="right__container">
                             <h2 class="h2__prices h2__prices-right">Our best <span>gardeners</span> are ready to help you</h2>
                             <button class="button button-price" id="contactUs">Contact us</button>
-                            <img src="./img/header/leafs.png" alt="Home flower" class="price__img">
+                            <img src="./src/img/header/leafs.png" alt="Home flower" class="price__img">
                         </div>
                     </div>
                 </div>
@@ -173,16 +174,15 @@
                     <div class="contacts__container">
                         <h2 class="h2__contacts">Contact us</h2>
                         <div class="contacts__dropdown">
-                            <button class="dropdown__button">City<span class="dropdown__icon"></span></button>
-                            <ul class="dropdown__content">
-                                <li id="Canandaigua">Canandaigua, NY</li>
-                                <li id="NewYorkCity">New York City</li>
-                                <li id="Yonkers">Yonkers, NY</li>
-                                <li id="Sherrill">Sherrill, NY</li>
+                            <button class="dropdown__button" id="citySelector">City<span class="dropdown__icon"></span></button>
+                            <ul class="dropdown__content" id="cityList">
+                                <li data-select="Canandaigua, NY">Canandaigua, NY</li>
+                                <li data-select="New York City">New York City</li>
+                                <li data-select="Yonkers, NY">Yonkers, NY</li>
+                                <li data-select="Sherrill, NY">Sherrill, NY</li>
                               </ul>
                         </div>
-<!-- инлайн стиль исключительно до добавления js, просто чтоб было видно как выглядит и будет удален!!! style="display: block; opacity: 1;" -->
-                        <div class="contacts__adress" id="Canandaigua-item">
+                        <div class="contacts__adress" data-address="Canandaigua, NY">
                             <dl class="adresses">
                                 <dt>City:</dt>
                                 <dd>Canandaigua, NY</dd>
@@ -193,7 +193,7 @@
                             </dl>
                             <a href="tel:+15853930001" class="button button-adress">Call us</a>
                         </div>
-                        <div class="contacts__adress" id="Yonkers-item">
+                        <div class="contacts__adress" data-address="Yonkers, NY">
                             <dl class="adresses">
                                 <dt>City:</dt>
                                 <dd>Yonkers, NY</dd>
@@ -204,7 +204,7 @@
                             </dl>
                             <a href="tel:+19146780003" class="button button-adress">Call us</a>
                         </div>
-                        <div class="contacts__adress" id="Sherrill-item">
+                        <div class="contacts__adress" data-address="Sherrill, NY">
                             <dl class="adresses">
                                 <dt>City:</dt>
                                 <dd>Sherrill, NY</dd>
@@ -215,7 +215,7 @@
                             </dl>
                             <a href="tel:+13159080004" class="button button-adress">Call us</a>
                         </div>
-                        <div class="contacts__adress" id="NewYorkCity-item">
+                        <div class="contacts__adress" data-address="New York City">
                             <dl class="adresses">
                                 <dt>City:</dt>
                                 <dd>New York City</dd>
@@ -250,6 +250,6 @@
             </div>
         </div>
     </footer>
-<script src="/js/script.js"></script>
+<script src="src/js/script.js" type="module"></script>
 </body>
 </html>
